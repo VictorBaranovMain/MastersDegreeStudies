@@ -5,6 +5,7 @@
 \LoadClass[14pt]{extarticle}
 %%%%%
 
+\usepackage{dcolumn, booktabs,subcaption}
 \usepackage{float}
 \usepackage{multirow}
 \usepackage{lscape}

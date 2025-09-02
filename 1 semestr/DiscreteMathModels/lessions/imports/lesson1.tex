@@ -1,1 +1,107 @@
-\section{Lesson1}
+\section{Логика}
+
+Мат.логика имеет дело с высказываниями/утверждениями. Им присваивается значение либо истина, либо ложь.
+
+Суждения (высказывания) могут быть простыми и составными.
+
+Выделяют базовые связки?
+\begin{itemize}
+    \item Не $\urcorner$
+    \item И $\wedge$ (конъюнкция)
+    \item Или $\vee$ (дизюнкция)
+    \item Если, то $\Longrightarrow$ (импликация)
+    \item Тогда и только тогда $\Leftrightarrow$
+    \item Или, или $\oplus$
+\end{itemize}
+
+Можно составить таблицы, отражающую истинность соответствующих связок.
+
+\begin{table}[h]
+    \begin{subtable}[t]{0.2\textwidth}
+        \begin{tabular}[h]{c c}
+            A & $\urcorner$ A \\
+            1 & 0 \\
+            0 & 1 \\
+        \end{tabular}
+        \subcaption{Таблица связки "не"}
+    \end{subtable}
+    \begin{subtable}[t]{0.2\textwidth}
+        \begin{tabular}[t]{c c c}
+            A & B & A$\wedge$B \\
+            1 & 1 & 1 \\
+            1 & 0 & 0\\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+        \end{tabular}
+        \subcaption{Таблица "И"}
+    \end{subtable}
+    \begin{subtable}[t]{0.2\textwidth}
+        \begin{tabular}[t]{c c c}
+            A & B & A$\vee$ B \\
+            1 & 0 & 1 \\
+            1 & 1 & 1 \\
+            0 & 1 & 1 \\
+            0 & 0 & 0
+        \end{tabular}
+        \subcaption{Таблица "или"}
+    \end{subtable}
+\end{table}
+
+\begin{table}[h]
+    \begin{subtable}[t]{0.2\textwidth}
+        \begin{tabular}[h]{c c c}
+            A & B & A$\Longrightarrow$ B \\
+            1 & 1 & 1 \\
+            1 & 0 & 0 \\
+            0 & 1 & 1 \\
+            0 & 0 & 1
+        \end{tabular}
+    \subcaption{Таблица "если, то"}
+    \end{subtable}
+    \begin{subtable}[t]{0.2\textwidth}
+    \begin{tabular}[h]{c c c}
+        A & B & A$\Leftrightarrow$ B \\
+        1 & 0 & 0 \\
+        1 & 1 & 1 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+    \end{tabular}
+    \subcaption{Таблица "тогда и только тогда"}
+    \end{subtable}
+    \begin{subtable}[t]{0.2\textwidth}
+    \begin{tabular}[h]{c c c}
+        A & B & A$\oplus$ B \\
+        1 & 0 & 1 \\
+        1 & 1 & 0 \\
+        0 & 1 & 1 \\
+        0 & 0 & 0
+    \end{tabular}
+    \subcaption{"Или, или"}
+    \end{subtable}
+\end{table}
+
+\subsection{Множества}
+
+$x\in A$ - $x$ является элементом множества $A$
+
+$x\notin A$ - не является
+
+$B\subset A$ - множество B входит в множества А. Обозначение $\subseteq$ подразумевает возможное совпадение множества.
+
+Например, : $A := \{1,2,3\};\; B:=\{2,3\};\;\Rightarrow B\subseteq A$
+
+Пустое множество: $\emptyset$ или $\oslash$ или $\varnothing$ - множество, не содержащее элементов.
+
+Можно рассматривать дополнение к множеству. Например, если работаем над полем целых чисел $\mathbb{Z}$, и вводим множество $A:=\{2,5\}$, то дополнением $\overline{A}:=\mathbb{Z}/\{2,5\}$, где $/$ - операция вычитания.
+
+Конъюнкция множеств является множество, состоящее из общих элементов: $A\wedge B \equiv A\cap B := \{x| x\in A \wedge x\in B\}$.
+
+Дизюнкция определяется как объединение всех элементов обоих множеств, взятых единожды: $A\vee B \equiv A\cup B := \{x,y| x\in A \vee y\in B\}$.
+
+Разность множеств - множество, элементы которого содержатся в первом множестве, но не содержатся во мтором: $A/B := \{x: x\in A \wedge x\notin B\}$.
+
+Пустое множество явлется нейтральным по отношению к сложению множеством.
+
+Симметрическая разность: $A\triangle B \equiv( A/B) \cup (B/A):= \{x| (x\in A, x\notin B )\vee (x\notin A, x\in B)\}$.
+
+Равенство множеств определяется поэлементно: $A=B:= (A\subseteq B) \wedge (B\subseteq A)$
